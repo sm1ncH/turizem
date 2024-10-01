@@ -1,0 +1,7 @@
+- baza
+- google login
+- razpored sob
+- povezovanje sob in uporabnikov ter rezervacije
+- omejevanje za rezervacije
+- ip block za več kot določeno rezervacij 
+- admin plošča za nadzor in vpisovanje v sistem (foolproof stran)
