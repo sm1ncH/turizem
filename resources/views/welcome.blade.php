@@ -18,42 +18,258 @@
     </head>
     <body class="bg-green-100 text-gray-900 antialiased">
     
-            <!-- Header -->
-            <header class="w-3/4 mx-auto py-6">
-                @if (Route::has('login'))
-                    <nav class="flex justify-between items-center">
-                        <div class="space-x-6">
-                            <a href="#" class="text-lg font-semibold text-green-700 hover:text-green-900">Main</a>
-                            <a href="#" class="text-lg font-semibold text-green-700 hover:text-green-900">Rooms</a>
-                            <a href="#" class="text-lg font-semibold text-green-700 hover:text-green-900">Contact Us</a>
-                        </div>
-                        <div class="space-x-6">
-                            @auth
-                                <a href="{{ url('/dashboard') }}" class="text-lg font-semibold text-green-700 hover:text-green-900">Dashboard</a>
-                            @else
-                                <a href="{{ route('login') }}" class="text-lg font-semibold text-green-700 hover:text-green-900">Log in</a>
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="text-lg font-semibold text-green-700 hover:text-green-900">Register</a>
-                                @endif
-                            @endauth
-                        </div>
-                    </nav>
-                @endif
-            </header>
+            <!-- Navigation -->
+            <nav class="w-full fixed top-0 left-0 z-20 bg-white shadow-md">
+    <div class="w-3/4 mx-auto py-6">
+        @if (Route::has('login'))
+            <div class="flex justify-between items-center">
+                <div class="space-x-6">
+                    <a href="#" class="text-lg font-semibold text-green-700 hover:text-green-900">Main</a>
+                    <a href="#" class="text-lg font-semibold text-green-700 hover:text-green-900">Rooms</a>
+                    <a href="#" class="text-lg font-semibold text-green-700 hover:text-green-900">Contact Us</a>
+                </div>
+                <div class="space-x-6">
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="text-lg font-semibold text-green-700 hover:text-green-900">Dashboard</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-lg font-semibold text-green-700 hover:text-green-900">Log in</a>
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="text-lg font-semibold text-green-700 hover:text-green-900">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            </div>
+        @endif
+    </div>
+</nav>
+
+<header class="w-full h-screen bg-cover bg-center text-center py-24 px-8 mb-20 relative" style="background-image: url('https://www.jenjewell.ca/wp-content/uploads/2024/01/what-qualifies-as-a-farm-in-ontario.jpg');">
+    <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Overlay for better text contrast -->
+    <div class="relative z-10 flex items-center justify-center h-full">
+        <div>
+            <h1 class="text-7xl font-bold text-white leading-tight mb-6">Welcome to Home Farm Hostel</h1>
+            <p class="text-3xl text-white font-bold text-opacity-90 mb-12">A serene getaway surrounded by nature.</p>
+            <a href="#book-now" class="px-8 py-4 bg-green-600 text-white rounded-full text-2xl font-semibold hover:bg-green-700 transition duration-300 shadow-lg transform hover:scale-105">
+                Book Now
+            </a>
+        </div>
+    </div>
+</header>
+
+
+
+
+            <!-- about -->
+            <div class="mb-20">
+                <h2 class=" font-semibold text-green-800 text-center text-5xl mb-9">About Us</h2>
+                <div class="flex items-center justify-center mx-auto w-2/3">
+                    <img 
+                            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/358930738.jpg?k=96ab5cc9b77d8e8d7d8d4dccdd466ba82bdb9089dcd0674d96de7d5ec5a25791&o=" 
+                            alt="Home Farm Hostel" 
+                            class="w-1/3 h-auto rounded-lg shadow-lg"
+                    >
+                <p class="ml-8 text-green-700 text-2xl">
+                Home Farm Hostel is a family-run business that offers a unique experience to its guests. 
+                We are located in the heart of the countryside, surrounded by nature and tranquility. 
+                Our hostel is the perfect place to relax and unwind, away from the hustle and bustle of city life.
+                </p>
+                </div>
+
+            </div>
+                <!-- galery -->
+                <div class="relative w-2/3 mx-auto mb-20">
+    <h2 class="font-semibold text-green-800 text-center text-5xl mb-9">Gallery</h2>
+    <div class="overflow-hidden relative">
+        <div class="flex transition-transform duration-700" id="slider" style=" height: 700px;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/354410565.jpg?k=afba0a2e55d5361b4fcb0d2b38611b7ae343539f8873e94f22e8f4b15a99205a&o=&hp=1" alt="Home Farm Hostel" class="w-2/3 object-cover rounded-lg shadow-lg">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/44667246.jpg?k=48914d34686a254a237c5ab795a0ecf32b2581cbe0e537e16537567a6061b189&o=&hp=1" alt="Home Farm Hostel" class="w-2/3 object-cover rounded-lg shadow-lg">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/265295544.jpg?k=258719bd25aac628fc889576dcfe3b6e762054fd6fe8ccd1490c5826b9cdcc35&o=&hp=1" alt="Home Farm Hostel" class="w-2/3 object-cover rounded-lg shadow-lg">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/352908047.jpg?k=f1cd0ba1a5be2c20f1885182f173f2052f648172e4732acd5c2603aff6754bd8&o=&hp=1" alt="Home Farm Hostel" class="w-2/3 object-cover rounded-lg shadow-lg" >
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/44667228.jpg?k=120de3baaeb52410887da64d1f25c50877dd6cc9224c2071de92aad2b61d1688&o=&hp=1" alt="Home Farm Hostel" class="w-2/3 object-cover rounded-lg shadow-lg" >
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/19124693.jpg?k=6c2b46345de7ce0a9dd206fe0f83858ca1e7b66a278515b276dc3c4670e9a05a&o=&hp=1" alt="Home Farm Hostel" class="w-2/3 object-cover rounded-lg shadow-lg" >
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-2 rounded-full" onclick="moveSlide(-1)">←</button>
+    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-2 rounded-full" onclick="moveSlide(1)">→</button>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('#slider img');
+    const totalSlides = slides.length;
+    let slideInterval;
+
+    // Function to move the slide
+    function moveSlide(direction) {
+        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+        const slider = document.getElementById('slider');
+        slider.style.transform = `translateX(-${currentSlide * 300 / totalSlides}%)`;
+
+        // Restart the auto-slide timer
+        resetAutoSlide();
+    }
+
+    // Function to reset the auto-slide timer
+    function resetAutoSlide() {
+        clearInterval(slideInterval); // Clear the existing timer
+        slideInterval = setInterval(() => {
+            moveSlide(1); // Automatically move forward
+        }, 4000); // Restart the timer with 4 seconds interval
+    }
+
+    // Auto slide every 4 seconds
+    resetAutoSlide();
+</script>
+
+
+
+
+
+            <!-- to bo bol odspodi  -->
+
+            <div class="maps">
     
-            <!-- Main Content -->
-            <main class="w-3/4 mx-auto text-center py-12 " >
-                <!-- bg image -->
-                <!-- <img src="https://www.jenjewell.ca/wp-content/uploads/2024/01/what-qualifies-as-a-farm-in-ontario.jpg" alt="Farmhouse" class="rounded-md shadow-lg mb-6 "> -->
-                <h1 class="text-4xl font-bold text-green-800 bg-[url(https://www.jenjewell.ca/wp-content/uploads/2024/01/what-qualifies-as-a-farm-in-ontario.jpg)]">Welcome to Home Farm Hostel</h1>
-                <p class="text-xl text-green-700 mb-6">A serene getaway surrounded by nature.</p>
-                <a href="#" class="px-6 py-3 bg-green-600 text-white rounded-md text-lg font-semibold hover:bg-green-700 transition">Book Now</a>
-            </main>
+    <!-- Footer -->
+    <footer class="w-full py-12 bg-green-800 text-white text-center mt-12">
+    <h2 class="font-semibold text-white text-center text-5xl mb-9">Where you can find us?</h2>
+        <div class="flex justify-between items-center w-3/4 mx-auto">
+            <!-- Left Side: Contact Info & Social Media -->
+            <div class="w-1/2 text-left">
+                <h3 class="text-2xl font-semibold text-white mb-4">Contact Us</h3>
+                <p class="text-lg mb-2">123 Farm Lane, Ontario, Canada</p>
+                <p class="text-lg mb-2">Email: info@homefarmhostel.com</p>
+                <p class="text-lg mb-4">Phone: +1 234 567 890</p>
+
+                <div class="space-x-4">
+                    <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-green-400 text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-white hover:text-green-400 text-2xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.booking.com" target="_blank" class="text-white hover:text-green-400 text-2xl">
+                        <i class="fab fa-bookmark"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Right Side: Map -->
+            <div class="w-1/2">
+                <div id="map" class="w-full" style="height: 300px;"></div>
+            </div>
+        </div>
+        <div class="text-center mt-6">
+            <p>&copy; {{ date('Y') }} Home Farm Hostel. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5nPPyp2vkIqulwFAQyarT4CQZY4ZwlQ4&callback=initMap&libraries=places&v=weekly&solution_channel=GMP_CCS_autocomplete_v1" defer></script>
+
+<script>
+    let map, activeInfoWindow, markers = [];
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 28.626137, lng: 79.821603 },
+            zoom: 15,
+        });
+    }
+
+    window.onload = initMap;
+</script>
+
     
-            <!-- Footer -->
-            <footer class="w-full py-4 bg-green-800 text-white text-center mt-12">
-                <p>&copy; {{ date('Y') }} Home Farm Hostel. All rights reserved.</p>
-            </footer>
+
+
+            <!-- blaz dont be mad neka sm sprobiulo tule :D -->
+
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+            <div class="h-6 w-6 rounded-full bg-black fixed top-0 left-0 pointer-events-none z-[99999999] opacity-50" id="circle"></div>
+
+            
+<script>
+    const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll("#circle");
+
+const colors = [
+  "#ffb56b",
+  "#fdaf69",
+  "#f89d63",
+  "#f59761",
+  "#ef865e",
+  "#ec805d",
+  "#e36e5c",
+  "#df685c",
+  "#d5585c",
+  "#d1525c",
+  "#c5415d",
+  "#c03b5d",
+  "#b22c5e",
+  "#ac265e",
+  "#9c155f",
+  "#950f5f",
+  "#830060",
+  "#7c0060",
+  "#680060",
+  "#60005f",
+  "#48005f",
+  "#3d005e"
+];
+
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function(e){
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+  
+});
+
+function animateCircles() {
+  
+  let x = coords.x;
+  let y = coords.y;
+  
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
     
+    circle.style.scale = (circles.length - index) / circles.length;
+    
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+ 
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+
+</script>
         </body>
 </html>
