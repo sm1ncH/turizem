@@ -43,11 +43,11 @@
     </div>
 </nav>
 
-<header class="w-full h-screen bg-cover bg-center text-center py-24 px-8 mb-20 relative" style="background-image: url('https://www.jenjewell.ca/wp-content/uploads/2024/01/what-qualifies-as-a-farm-in-ontario.jpg');">
+<header class="w-full h-screen bg-cover bg-center text-center py-24 px-8 mb-20 relative" style="background-image: url('https://lh3.googleusercontent.com/p/AF1QipP_fNG3s8Ah1CuZ_uuleCmkGLuY5Ait7e33Zi6u=s1360-w1360-h1020-rw');">
     <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Overlay for better text contrast -->
     <div class="relative z-10 flex items-center justify-center h-full">
         <div>
-            <h1 class="text-7xl font-bold text-white leading-tight mb-6">Welcome to Home Farm Hostel</h1>
+            <h1 class="text-7xl font-bold text-white leading-tight mb-6">Kmečki turizam Masnec</h1>
             <p class="text-3xl text-white font-bold text-opacity-90 mb-12">A serene getaway surrounded by nature.</p>
             <a href="#book-now" class="px-8 py-4 bg-green-600 text-white rounded-full text-2xl font-semibold hover:bg-green-700 transition duration-300 shadow-lg transform hover:scale-105">
                 Book Now
@@ -55,10 +55,6 @@
         </div>
     </div>
 </header>
-
-
-
-
             <!-- about -->
             <div class="mb-20">
                 <h2 class=" font-semibold text-green-800 text-center text-5xl mb-9">About Us</h2>
@@ -122,11 +118,6 @@
     // Auto slide every 4 seconds
     resetAutoSlide();
 </script>
-
-
-
-
-
             <!-- to bo bol odspodi  -->
 
             <div class="maps">
