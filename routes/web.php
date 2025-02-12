@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmailController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,4 +18,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::namespace('App\Http\Controllers')->group(function () {
+    Route::get('/kontakt', 'EmailController@index')->name('contact');
+
+
+});
+
+Route::post('/submit-contact-form-route', [EmailController::class, 'sendEmail'])->name('submit-contact-form');
+
+
 require __DIR__.'/auth.php';
+
